@@ -31,6 +31,7 @@ public class AdicionarDisciplina extends javax.swing.JFrame {
         initComponents();
         listarCursosExistentes();
         listarProfessoresExistentes();
+        this.setLocationRelativeTo(null);
     }
 
     /**

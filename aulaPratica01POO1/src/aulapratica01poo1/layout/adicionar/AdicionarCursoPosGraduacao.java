@@ -21,6 +21,7 @@ public class AdicionarCursoPosGraduacao extends javax.swing.JFrame {
      */
     public AdicionarCursoPosGraduacao() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

@@ -24,6 +24,7 @@ public class ListarTecnico extends javax.swing.JFrame {
     public ListarTecnico() {
         initComponents();
         listar();
+        this.setLocationRelativeTo(null);
     }
 
     /**

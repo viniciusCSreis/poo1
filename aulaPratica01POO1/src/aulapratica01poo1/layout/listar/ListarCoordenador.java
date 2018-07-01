@@ -24,6 +24,7 @@ public class ListarCoordenador extends javax.swing.JFrame {
     public ListarCoordenador() {
         initComponents();
         listar();
+        this.setLocationRelativeTo(null);
     }
 
     /**

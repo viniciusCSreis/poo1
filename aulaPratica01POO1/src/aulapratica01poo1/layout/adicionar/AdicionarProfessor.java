@@ -21,6 +21,7 @@ public class AdicionarProfessor extends javax.swing.JFrame {
      */
     public AdicionarProfessor() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

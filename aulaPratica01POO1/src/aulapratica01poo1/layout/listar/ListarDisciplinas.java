@@ -24,6 +24,7 @@ public class ListarDisciplinas extends javax.swing.JFrame {
     public ListarDisciplinas() {
         initComponents();
        mostrarDadosTabela(TabelaListarDisciplina);
+       this.setLocationRelativeTo(null);
     }
     
 

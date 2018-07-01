@@ -21,6 +21,7 @@ public class AdicionarTecnico extends javax.swing.JFrame {
      */
     public AdicionarTecnico() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

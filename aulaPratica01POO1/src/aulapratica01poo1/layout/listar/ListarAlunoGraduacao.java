@@ -25,6 +25,7 @@ public class ListarAlunoGraduacao extends javax.swing.JFrame {
     public ListarAlunoGraduacao() {
         initComponents();
         listar();
+        this.setLocationRelativeTo(null);
     }
 
     /**

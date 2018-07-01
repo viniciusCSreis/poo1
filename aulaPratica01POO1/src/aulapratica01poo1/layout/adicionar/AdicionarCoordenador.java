@@ -22,6 +22,7 @@ public class AdicionarCoordenador extends javax.swing.JFrame {
      */
     public AdicionarCoordenador() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

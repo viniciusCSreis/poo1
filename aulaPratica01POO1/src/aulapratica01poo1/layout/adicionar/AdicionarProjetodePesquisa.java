@@ -32,6 +32,7 @@ public class AdicionarProjetodePesquisa extends javax.swing.JFrame {
         initComponents();
         tirrarColorError();
         listar();
+        this.setLocationRelativeTo(null);
         
         
     }
