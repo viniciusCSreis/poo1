@@ -24,6 +24,10 @@ import aulapratica01poo1.layout.listar.ListarProfessor;
 import aulapratica01poo1.layout.listar.ListarProjetodePesquisa;
 import aulapratica01poo1.layout.listar.ListarTecnico;
 import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics2D;
+import java.awt.SplashScreen;
+import java.awt.geom.Rectangle2D;
 
 /**
  *
@@ -32,14 +36,63 @@ import java.awt.Color;
 public class main extends javax.swing.JFrame {
 
     public static Color colorError = new Color(255, 77, 77);
-    
-    /**
-     * Creates new form main
-     */
+    private static SplashScreen mySplash;
+    private static Graphics2D splashGraphics;
+    private static Rectangle2D.Double splashProgressArea;
+        
     public main() {
+        splashInit();           // Aqui inicia nosso Splash
+        appInit();
         initComponents();
+        this.setLocationRelativeTo(null);
+        
+                   
+        if (mySplash != null)   // se der ruim ele fecha
+            mySplash.close();   
+        
+        // begin with the interactive portion of the program
     }
+    
+    private static void splashInit()
+    {
+        SplashScreen mySplash = SplashScreen.getSplashScreen();
+        if (mySplash != null)
+        {   // se houver algum problema ao exibir o splash, isso será nulo
+            Dimension ssDim = mySplash.getSize();
+            int height = ssDim.height;
+            int width = ssDim.width;
+            // Aqui estou pegando o área para mostrar nosso SplashScreen
+            Rectangle2D.Double splashTextArea = new Rectangle2D.Double(15., height*0.88, width * .45, 32.);
+            Rectangle2D.Double splashProgressArea = new Rectangle2D.Double(width * .55, height*.92, width*.4, 12 );
 
+            // cria o ambiente Graphics para informações de status do desenho
+            Graphics2D splashGraphics = mySplash.createGraphics();
+        }
+    }
+    
+    
+    
+     /**
+     * just a stub to simulate a long initialization task that updates
+     * the text and progress parts of the status in the Splash
+     */
+    private static void appInit()
+    {
+        for(int i=1;i<=10;i++)
+        {
+            int pctDone = i * 10;
+            try
+            {
+                Thread.sleep(500);
+            }
+            catch (InterruptedException ex)
+            {
+                // ignore it
+            }
+        }
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
