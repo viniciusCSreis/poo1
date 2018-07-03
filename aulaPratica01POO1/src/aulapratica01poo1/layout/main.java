@@ -20,6 +20,7 @@ import aulapratica01poo1.layout.listar.ListarCoordenador;
 import aulapratica01poo1.layout.listar.ListarCursoGraduacao;
 import aulapratica01poo1.layout.listar.ListarCursoPosGraduacao;
 import aulapratica01poo1.layout.listar.ListarDisciplinas;
+import aulapratica01poo1.layout.listar.ListarFolhaDePagamento;
 import aulapratica01poo1.layout.listar.ListarProfessor;
 import aulapratica01poo1.layout.listar.ListarProjetodePesquisa;
 import aulapratica01poo1.layout.listar.ListarTecnico;
@@ -215,6 +216,11 @@ public class main extends javax.swing.JFrame {
         jMenu2.add(jMenu6);
 
         jMenuItem5.setText("Folha de Pagamento");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem5);
 
         jMenuItem6.setText("Projeto de Pesquisa");
@@ -435,6 +441,12 @@ public class main extends javax.swing.JFrame {
         ListarTecnico a = new ListarTecnico();
         a.setVisible(true);
     }//GEN-LAST:event_jMenuItem17ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        // TODO add your handling code here:
+       ListarFolhaDePagamento a = new ListarFolhaDePagamento();
+        a.setVisible(true);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     /**
      * @param args the command line arguments

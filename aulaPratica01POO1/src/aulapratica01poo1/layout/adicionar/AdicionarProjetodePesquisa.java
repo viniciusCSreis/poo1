@@ -46,25 +46,25 @@ public class AdicionarProjetodePesquisa extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jToolBar1 = new javax.swing.JToolBar();
         jScrollPane7 = new javax.swing.JScrollPane();
         jScrollPane6 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
         PanelProjetodePesquisa = new javax.swing.JPanel();
         TituloAdicionarProjetodePesquisa = new javax.swing.JLabel();
         LTitulo = new javax.swing.JLabel();
         titulo = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
         LCodigo = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         LProfessorResponsavel = new javax.swing.JLabel();
-        dtFim = new javax.swing.JFormattedTextField();
         dtInicio = new javax.swing.JFormattedTextField();
         codigo = new javax.swing.JFormattedTextField();
         jPanelProf = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jListProf = new javax.swing.JList<>();
+        jLabel1 = new javax.swing.JLabel();
+        dtFim = new javax.swing.JFormattedTextField();
         jPanelEquipe = new javax.swing.JPanel();
         jPanelEquipeAlunoPos = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -80,6 +80,8 @@ public class AdicionarProjetodePesquisa extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         Cadastrar = new javax.swing.JButton();
 
+        jToolBar1.setRollover(true);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel2.setText("Adicionar Equipe(utilize o shift para selecionar mais de 1):");
@@ -94,15 +96,11 @@ public class AdicionarProjetodePesquisa extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Data de Término");
-
         LCodigo.setText("Código");
 
         jLabel3.setText("Data de Início");
 
         LProfessorResponsavel.setText("Professor Responsável");
-
-        dtFim.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter()));
 
         dtInicio.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter()));
 
@@ -120,18 +118,31 @@ public class AdicionarProjetodePesquisa extends javax.swing.JFrame {
         jPanelProf.setLayout(jPanelProfLayout);
         jPanelProfLayout.setHorizontalGroup(
             jPanelProfLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelProfLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGap(0, 130, Short.MAX_VALUE)
+            .addGroup(jPanelProfLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelProfLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanelProfLayout.setVerticalGroup(
             jPanelProfLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelProfLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGap(0, 152, Short.MAX_VALUE)
+            .addGroup(jPanelProfLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelProfLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
+
+        jLabel1.setText("Data de Término");
+
+        dtFim.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter()));
+        dtFim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dtFimActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PanelProjetodePesquisaLayout = new javax.swing.GroupLayout(PanelProjetodePesquisa);
         PanelProjetodePesquisa.setLayout(PanelProjetodePesquisaLayout);
@@ -143,60 +154,60 @@ public class AdicionarProjetodePesquisa extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(PanelProjetodePesquisaLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
+                .addGroup(PanelProjetodePesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(PanelProjetodePesquisaLayout.createSequentialGroup()
+                        .addComponent(LCodigo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(codigo, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PanelProjetodePesquisaLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dtInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(68, 68, 68)
                 .addGroup(PanelProjetodePesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LTitulo)
+                    .addComponent(jLabel1)
+                    .addComponent(LTitulo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PanelProjetodePesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dtFim, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(PanelProjetodePesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(LProfessorResponsavel)
                     .addComponent(jPanelProf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(PanelProjetodePesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanelProjetodePesquisaLayout.createSequentialGroup()
-                        .addGroup(PanelProjetodePesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(LCodigo)
-                            .addGroup(PanelProjetodePesquisaLayout.createSequentialGroup()
-                                .addGroup(PanelProjetodePesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(dtFim, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(PanelProjetodePesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(PanelProjetodePesquisaLayout.createSequentialGroup()
-                                        .addGap(25, 25, 25)
-                                        .addComponent(jLabel3))
-                                    .addGroup(PanelProjetodePesquisaLayout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(dtInicio)))))
-                        .addGap(14, 14, 14))
-                    .addGroup(PanelProjetodePesquisaLayout.createSequentialGroup()
-                        .addComponent(codigo, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(87, 87, 87))
         );
         PanelProjetodePesquisaLayout.setVerticalGroup(
             PanelProjetodePesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelProjetodePesquisaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(TituloAdicionarProjetodePesquisa)
-                .addGap(29, 29, 29)
-                .addGroup(PanelProjetodePesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LCodigo))
-                .addGap(27, 27, 27)
-                .addGroup(PanelProjetodePesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(codigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addGroup(PanelProjetodePesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(LProfessorResponsavel)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
                 .addGroup(PanelProjetodePesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanelProjetodePesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(dtFim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(dtInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanelProf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PanelProjetodePesquisaLayout.createSequentialGroup()
+                        .addGroup(PanelProjetodePesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PanelProjetodePesquisaLayout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(LCodigo)
+                                .addGap(28, 28, 28))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelProjetodePesquisaLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(PanelProjetodePesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(codigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(LTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)))
+                        .addGroup(PanelProjetodePesquisaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(dtInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1)
+                            .addComponent(dtFim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(PanelProjetodePesquisaLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(LProfessorResponsavel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanelProf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        jScrollPane4.setViewportView(PanelProjetodePesquisa);
 
         jListEquipeAlunoPosGraduacao.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -258,6 +269,17 @@ public class AdicionarProjetodePesquisa extends javax.swing.JFrame {
                 .addGap(50, 50, 50))
         );
 
+        javax.swing.GroupLayout jPanelEquipeAlunoGraduacaoLayout = new javax.swing.GroupLayout(jPanelEquipeAlunoGraduacao);
+        jPanelEquipeAlunoGraduacao.setLayout(jPanelEquipeAlunoGraduacaoLayout);
+        jPanelEquipeAlunoGraduacaoLayout.setHorizontalGroup(
+            jPanelEquipeAlunoGraduacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 461, Short.MAX_VALUE)
+        );
+        jPanelEquipeAlunoGraduacaoLayout.setVerticalGroup(
+            jPanelEquipeAlunoGraduacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 164, Short.MAX_VALUE)
+        );
+
         jListEquipeAlunoGraduacao.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -267,40 +289,6 @@ public class AdicionarProjetodePesquisa extends javax.swing.JFrame {
 
         jLabel6.setText("Selecione os alunos Graduação(utilize o shift e ctrl para selecionar mais de 1):");
 
-        Cadastrar.setText("Cadastrar");
-        Cadastrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CadastrarActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanelEquipeAlunoGraduacaoLayout = new javax.swing.GroupLayout(jPanelEquipeAlunoGraduacao);
-        jPanelEquipeAlunoGraduacao.setLayout(jPanelEquipeAlunoGraduacaoLayout);
-        jPanelEquipeAlunoGraduacaoLayout.setHorizontalGroup(
-            jPanelEquipeAlunoGraduacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelEquipeAlunoGraduacaoLayout.createSequentialGroup()
-                .addGroup(jPanelEquipeAlunoGraduacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelEquipeAlunoGraduacaoLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanelEquipeAlunoGraduacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6)))
-                    .addGroup(jPanelEquipeAlunoGraduacaoLayout.createSequentialGroup()
-                        .addGap(147, 147, 147)
-                        .addComponent(Cadastrar)))
-                .addContainerGap())
-        );
-        jPanelEquipeAlunoGraduacaoLayout.setVerticalGroup(
-            jPanelEquipeAlunoGraduacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelEquipeAlunoGraduacaoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23)
-                .addComponent(Cadastrar))
-        );
-
         javax.swing.GroupLayout jPanelEquipeLayout = new javax.swing.GroupLayout(jPanelEquipe);
         jPanelEquipe.setLayout(jPanelEquipeLayout);
         jPanelEquipeLayout.setHorizontalGroup(
@@ -308,7 +296,12 @@ public class AdicionarProjetodePesquisa extends javax.swing.JFrame {
             .addGroup(jPanelEquipeLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelEquipeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelEquipeAlunoPos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelEquipeLayout.createSequentialGroup()
+                        .addComponent(jPanelEquipeAlunoPos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelEquipeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6)))
                     .addComponent(jPanelEquipeProf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanelEquipeAlunoGraduacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
@@ -318,40 +311,53 @@ public class AdicionarProjetodePesquisa extends javax.swing.JFrame {
             .addGroup(jPanelEquipeLayout.createSequentialGroup()
                 .addComponent(jPanelEquipeProf, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelEquipeAlunoPos, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelEquipeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanelEquipeAlunoPos, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelEquipeLayout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanelEquipeAlunoGraduacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        Cadastrar.setText("Cadastrar");
+        Cadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CadastrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 546, Short.MAX_VALUE)
-                        .addContainerGap())))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanelEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(PanelProjetodePesquisa, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanelEquipe, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(392, 392, 392)
+                        .addComponent(Cadastrar)))
+                .addContainerGap(375, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
+                .addGap(15, 15, 15)
+                .addComponent(PanelProjetodePesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addComponent(jPanelEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(Cadastrar)
+                .addGap(58, 58, 58))
         );
 
         jScrollPane6.setViewportView(jPanel1);
@@ -362,7 +368,7 @@ public class AdicionarProjetodePesquisa extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane7, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jScrollPane7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 920, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -439,6 +445,10 @@ public class AdicionarProjetodePesquisa extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tituloActionPerformed
 
+    private void dtFimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dtFimActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dtFimActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -504,10 +514,10 @@ public class AdicionarProjetodePesquisa extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JToolBar jToolBar1;
     private javax.swing.JTextField titulo;
     // End of variables declaration//GEN-END:variables
 
